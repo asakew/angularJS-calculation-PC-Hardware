@@ -3,3 +3,4 @@
 
 ### Foydalingan manbalar
 [AngularJS](https://angularjs.org/) v1.8.2
+[Prepros](https://prepros.io/) - fayllarni kompilyatsiya qiladi.
