@@ -1,3 +1,7 @@
 *.agdai
 *README.html
 *prepros-6.config
+*.css.map
+*.sass.map
+*.scss.map
+*assets/css/
