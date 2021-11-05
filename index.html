@@ -10,12 +10,12 @@
 	</head>
 	<body>
 		<div ng-app="invoice1" ng-controller="InvoiceController as invoice">
-			<b>Invoice:</b>
+			<h1>Abbos aka:</h1>
 			<div>
-				Soni: <input type="number" min="0" ng-model="invoice.qty" required >
+				RAM: <input type="number" min="0" ng-model="invoice.qty" required > GB
 			</div>
 			<div>
-				Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+				Kompyuterlar soni: <input type="number" min="0" ng-model="invoice.cost" required >
 				<select ng-model="invoice.inCurr">
 					<option ng-repeat="c in invoice.currencies">{{c}}</option>
 				</select>
@@ -27,6 +27,51 @@
 				</span><br>
 				<button class="btn" ng-click="invoice.pay()">Pay</button>
 			</div>
+
+<hr>
+
+<form>
+  <h2>Sizga qaney kompyuter kerak?</h2>
+  <input type="radio" ng-model="myVar" value="ofisniy">Ofisniy
+  <input type="radio" ng-model="myVar" value="gaming">Gaming
+  <input type="radio" ng-model="myVar" value="video_mantaj">Video Mantaj
+  <input type="radio" ng-model="myVar" value="3d_rending">2D, 3D Rending
+  <!-- <p>sizga hozirgi kunda tafsiya man/qilamiza xaraktiriskalar</p> -->
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="ofisniy">
+     <h1>Ofisniy</h1>
+     <ul>
+     	<li>
+     		
+     	</li>
+     	<li>
+     		
+     	</li>
+     	<li>
+     		
+     	</li>
+     	<li>
+     		
+     	</li>
+     </ul>
+  </div>
+  <div ng-switch-when="gaming">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="video_mantaj">
+     <h1>video_mantaj</h1>
+     <p>Read about video_mantaj.</p>
+  </div>
+  <div ng-switch-when="3d_rending">
+     <h1>3D Rending</h1>
+     <p>Read about 3D Rending.</p>
+  </div>
+</div>
+
+
 		</div>
 	</body>
 </html>

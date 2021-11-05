@@ -3,13 +3,13 @@
 angular.module('invoice1', [])
   .controller('InvoiceController', function InvoiceController() {
     this.qty = 1;
-    this.cost = 2;
+    this.cost = 1;
     this.inCurr = 'UZS';
     this.currencies = ['UZS', 'USD', 'RUB'];
     this.usdToForeignRates = {
-      USD: 1,
-      EUR: 0.74,
-      CNY: 6.09
+      UZS: 100,
+      USD: 148,
+      RUB: 10689
     };
 
     this.total = function total(outCurr) {
