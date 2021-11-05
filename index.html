@@ -6,77 +6,49 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="assets/css/style.css">
 		<script src="assets/js/angular.min.js"></script>
-		<script src="assets/js/invoice1.js"></script>
 	</head>
 	<body>
-		<div ng-app="invoice1" ng-controller="InvoiceController as invoice">
-			<h1>Abbos aka:</h1>
-			<div>
-				RAM: <input type="number" min="0" ng-model="invoice.qty" required > GB
+		<div ng-app="pcRelested">
+			<form>
+				<h2>Sizga qaney kompyuter kerak?</h2>
+				<input type="radio" ng-model="myVar" value="ofisniy" id="Ofisniy"><label for="Ofisniy">Ofisniy</label>
+				<input type="radio" ng-model="myVar" value="gaming" id="gaming"><label for="gaming">Gaming</label>
+				<input type="radio" ng-model="myVar" value="video_mantaj" id="Video_Mantaj"><label for="Video_Mantaj">Video_Mantaj</label>
+				<input type="radio" ng-model="myVar" value="3d_rending" id="3D_Rending"><label for="3D_Rending">3D Rending</label>
+				<p>sizga hozirgi kunda tafsiya etamiza</p>
+			</form>
+
+			<div ng-switch="myVar">
+				<div ng-switch-when="ofisniy">
+					<div ng-include="'/template-parts/pc-office/index.html'" ng-controller="pc_office_relested"></div>
+				</div>
+				<div ng-switch-when="gaming">
+					<h1>Tutorials</h1>
+					<p>Learn from examples.</p>
+				</div>
+				<div ng-switch-when="video_mantaj">
+					<h1>video_mantaj</h1>
+					<p>Read about video_mantaj.</p>
+				</div>
+				<div ng-switch-when="3d_rending">
+					<h1>3D Rending</h1>
+					<p>Read about 3D Rending.</p>
+				</div>
 			</div>
-			<div>
-				Kompyuterlar soni: <input type="number" min="0" ng-model="invoice.cost" required >
-				<select ng-model="invoice.inCurr">
-					<option ng-repeat="c in invoice.currencies">{{c}}</option>
-				</select>
-			</div>
-			<div>
-				<b>Jami:</b>
-				<span ng-repeat="c in invoice.currencies">
-					{{invoice.total(c) | currency:c}}
-				</span><br>
-				<button class="btn" ng-click="invoice.pay()">Pay</button>
-			</div>
-
-<hr>
-
-<form>
-  <h2>Sizga qaney kompyuter kerak?</h2>
-  <input type="radio" ng-model="myVar" value="ofisniy">Ofisniy
-  <input type="radio" ng-model="myVar" value="gaming">Gaming
-  <input type="radio" ng-model="myVar" value="video_mantaj">Video Mantaj
-  <input type="radio" ng-model="myVar" value="3d_rending">2D, 3D Rending
-  <!-- <p>sizga hozirgi kunda tafsiya man/qilamiza xaraktiriskalar</p> -->
-</form>
-
-<div ng-switch="myVar">
-  <div ng-switch-when="ofisniy">
-     <h1>Ofisniy</h1>
-     <ul>
-     	<li>
-     		
-     	</li>
-     	<li>
-     		
-     	</li>
-     	<li>
-     		
-     	</li>
-     	<li>
-     		
-     	</li>
-     </ul>
-  </div>
-  <div ng-switch-when="gaming">
-     <h1>Tutorials</h1>
-     <p>Learn from examples.</p>
-  </div>
-  <div ng-switch-when="video_mantaj">
-     <h1>video_mantaj</h1>
-     <p>Read about video_mantaj.</p>
-  </div>
-  <div ng-switch-when="3d_rending">
-     <h1>3D Rending</h1>
-     <p>Read about 3D Rending.</p>
-  </div>
-</div>
-
-
 		</div>
+		<script>
+			var app = angular.module('pcRelested', []);
+
+			app.controller('pc_office_relested', function($scope, $http) {
+				$http.get("/assets/json/pc-office-relested.json")
+				.then(function (response) {
+					$scope.relested = response.data.relested;
+				});
+			});
+		</script>
 	</body>
 </html>
-
-<!-- 
+<!--
 Copyright 2021 Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license

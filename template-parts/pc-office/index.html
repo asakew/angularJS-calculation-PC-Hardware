@@ -1,0 +1,94 @@
+<h1>Ofisniy kompyuterlar:</h1>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+    padding: 12px 8px;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.col {
+    float: left;
+    width: 33.3333333%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 780px) {
+    .col {
+        width: 50%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .col {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+</style>
+
+<div class="row">
+	<div ng-repeat="x in relested | orderBy" class="col">
+		<div class="card">
+			<div class="card-body">
+				<h2 class="card-title">narxi: {{x.price}} so'm</h2>
+				<li>
+					<b>Материнская плата</b> {{x.Motherboard}}
+				</li>
+				<li>
+					<b>Процессор</b> {{x.Processor}}
+				</li>
+				<li>
+					<b>Кулер</b> {{x.Cooler}}
+				</li>
+				<li>
+					<b>Оперативная память</b> {{x.RAM}}
+				</li>
+				<li>
+					<b>SSD</b> {{x.SSD}}
+				</li>
+				<li>
+					<b>Видеокарта</b> {{x.Graphics-card}}
+				</li>
+				<li>
+					<b>Блок питания</b> {{x.Power-supply}}
+				</li>
+				<li>
+					<b>Корпус</b> {{x.Case}}
+				</li>
+			</div>
+		</div>
+	</div>

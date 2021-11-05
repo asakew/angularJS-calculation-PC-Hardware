@@ -1,0 +1,70 @@
+{
+    "relested": [
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        },
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        },
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        },
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        },
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        },
+        {
+            "price": "3.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path",
+            "Cooler": "test_path",
+            "RAM": "test_path",
+            "SSD": "test_path",
+            "Graphics-card": "test_path",
+            "Power-supply": "test_path",
+            "Case": "test_path"
+        }
+    ]
+}
