@@ -4,3 +4,4 @@
 ### Foydalingan manbalar
 [AngularJS](https://angularjs.org/) v1.8.2
 [Prepros](https://prepros.io/) - fayllarni kompilyatsiya qiladi.
+[Masonry PACKAGED](https://masonry.desandro.com/) v4.2.2
