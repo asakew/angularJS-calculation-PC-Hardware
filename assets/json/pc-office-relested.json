@@ -1,69 +1,69 @@
 {
     "relested": [
         {
-            "price": "3.000.000",
+            "Price": "3.000.000",
+            "Motherboard": "Atermiter X79",
+            "Processor": "Intel Xeon E5 2689",
+            "Cooler": "Snowman MX6",
+            "RAM": "Kllisre KRE_D3U1600M/8G",
+            "SSD": "Goldenfir T650",
+            "Graphics_card": "NVIDIA GeForce GTX 750 Ti",
+            "Power_supply": "Aigo Warrior AK600 600W",
+            "Case": " Ginzzu C180"
+        },
+        {
+            "Price": "2.000.000",
+            "Motherboard": "test title",
+            "Processor": "test_path2",
+            "Cooler": "test_path3",
+            "RAM": "test_path4",
+            "SSD": "test_path5",
+            "Graphics_card": "NVIDIA GeForce GTX 750 Ti",
+            "Power_supply": "test_path6",
+            "Case": "test_path7"
+        },
+        {
+            "Price": "1.000.000",
             "Motherboard": "test title",
             "Processor": "test_path",
             "Cooler": "test_path",
             "RAM": "test_path",
             "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
+            "Graphics_card": "test_path",
+            "Power_supply": "test_path",
             "Case": "test_path"
         },
         {
-            "price": "3.000.000",
+            "Price": "3.000.000",
             "Motherboard": "test title",
             "Processor": "test_path",
             "Cooler": "test_path",
             "RAM": "test_path",
             "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
+            "Graphics_card": "test_path",
+            "Power_supply": "test_path",
             "Case": "test_path"
         },
         {
-            "price": "3.000.000",
+            "Price": "3.000.000",
             "Motherboard": "test title",
             "Processor": "test_path",
             "Cooler": "test_path",
             "RAM": "test_path",
             "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
+            "Graphics_card": "test_path",
+            "Power_supply": "test_path",
             "Case": "test_path"
         },
         {
-            "price": "3.000.000",
+            "Price": "3.000.000",
             "Motherboard": "test title",
             "Processor": "test_path",
             "Cooler": "test_path",
             "RAM": "test_path",
             "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
-            "Case": "test_path"
-        },
-        {
-            "price": "3.000.000",
-            "Motherboard": "test title",
-            "Processor": "test_path",
-            "Cooler": "test_path",
-            "RAM": "test_path",
-            "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
-            "Case": "test_path"
-        },
-        {
-            "price": "3.000.000",
-            "Motherboard": "test title",
-            "Processor": "test_path",
-            "Cooler": "test_path",
-            "RAM": "test_path",
-            "SSD": "test_path",
-            "Graphics-card": "test_path",
-            "Power-supply": "test_path",
+            "Graphics_card": "test_path",
+            "Power_supply": "test_path",
             "Case": "test_path"
         }
     ]
