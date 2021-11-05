@@ -1,11 +1,11 @@
-<h2 class="text-center text-uppersace">Ofisniy kompyuterlar:</h2>
+<h2 class="text-center text-uppercase">Ofisniy kompyuterlar:</h2>
 <div class="container-fluid">
 	<div class="row g-3" data-masonry='{"percentPosition": true }'>
 		<div ng-repeat="x in relested | orderBy" class="col-sm-6 col-lg-4">
 			<div class="card">
-				<img src="https://picsum.photos/250/150" class="card-img-top" alt="">
+				<img src="https://picsum.photos/250/170" class="card-img-top" alt="{{x.Case}}">
 				<div class="card-body">
-					<h3 class="card-title">narxi: {{x.Price}} so'm</h3>
+					<h3 class="card-title">{{x.Price}} so'm <span class="badge badge-secondary">/ {{x.postID}}</span></h3>
 					<div class="card-text">
 						<ul class="list-unstyled">
 							<li><b>Материнская плата:</b> {{x.Motherboard}}</li>
