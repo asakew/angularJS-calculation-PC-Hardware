@@ -5,20 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
 		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		<script src="assets/js/angular.min.js"></script>
 		<script src="assets/js/invoice1.js"></script>
 	</head>
-	<body>
+	<body class="container-fluid">
 		<div ng-controller="InvoiceController as invoice">
 			<h1>Abbos aka:</h1>
 			<div>
-				RAM: <input type="number" min="0" ng-model="invoice.qty" required > GB
+				RAM: <input class="form-control" type="number" min="0" ng-model="invoice.qty" required > GB
 			</div>
 			<div>
-				Kompyuterlar soni: <input type="number" min="0" ng-model="invoice.cost" required >
-				<select ng-model="invoice.inCurr">
-					<option ng-repeat="c in invoice.currencies">{{c}}</option>
-				</select>
+				Kompyuterlar soni: <input class="form-control" type="number" min="0" ng-model="invoice.cost" required >
+				
+				<div class="form-group">
+					    <label for="select">Example select</label>
+					<select ng-model="invoice.inCurr" class="form-control" id="select">
+						<option selected>Open this select menu</option>
+						<option ng-repeat="c in invoice.currencies">{{c}}</option>
+					</select>
+				</div>
 			</div>
 			<div>
 				<b>Jami:</b>
@@ -28,10 +34,10 @@
 				<button class="btn" ng-click="invoice.pay()">Pay</button>
 			</div>
 			<hr>
-	</body>
-</html>
-<!--
-Copyright 2021 Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
+		</body>
+	</html>
+	<!--
+	Copyright 2021 Google LLC. All Rights Reserved.
+	Use of this source code is governed by an MIT-style license that
+	can be found in the LICENSE file at http://angular.io/license
+	-->
