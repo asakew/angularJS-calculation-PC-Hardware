@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz-UZ" ng-app="pcRelested">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body>
+
+		<main id="pcRelested">
+			<form>
+				<h1>Sizga qaney kompyuter kerak?</h1>
+				<input type="radio" ng-model="myVar" value="ofisniy" id="Ofisniy"><label for="Ofisniy">Ofisniy</label>
+				<input type="radio" ng-model="myVar" value="gaming" id="gaming"><label for="gaming">Gaming</label>
+				<input type="radio" ng-model="myVar" value="video_mantaj" id="Video_Mantaj"><label for="Video_Mantaj">Video_Mantaj</label>
+				<input type="radio" ng-model="myVar" value="3d_rending" id="3D_Rending"><label for="3D_Rending">3D Rending</label>
+				<p>sizga hozirgi kunda tafsiya etamiza</p>
+			</form>
+
+			<div ng-switch="myVar">
+				<div ng-switch-when="ofisniy">
+					<div ng-include="'/template-parts/pc-office/index.html'" ng-controller="pc_office_relested"></div>
+				</div>
+				<div ng-switch-when="gaming">
+					<h1>Tutorials</h1>
+					<p>Learn from examples.</p>
+				</div>
+				<div ng-switch-when="video_mantaj">
+					<h1>video_mantaj</h1>
+					<p>Read about video_mantaj.</p>
+				</div>
+				<div ng-switch-when="3d_rending">
+					<h1>3D Rending</h1>
+					<p>Read about 3D Rending.</p>
+				</div>
+			</div>
+		</main>
+		<script>
+			var app = angular.module('pcRelested', []);
+
+			app.controller('pc_office_relested', function($scope, $http) {
+				$http.get("/assets/json/pc-office-relested.json")
+				.then(function (response) {
+					$scope.relested = response.data.relested;
+				});
+			});
+		</script>
+	</body>
+</html>
+<!--
+Copyright 2021 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
