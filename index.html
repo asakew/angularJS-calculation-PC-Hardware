@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz-UZ">
+<html lang="uz-UZ" ng-app="pcRelested">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,8 @@
 		<script src="assets/js/angular.min.js"></script>
 	</head>
 	<body>
-		<div ng-app="pcRelested">
+
+		<main id="pcRelested">
 			<form>
 				<h1>Sizga qaney kompyuter kerak?</h1>
 				<input type="radio" ng-model="myVar" value="ofisniy" id="Ofisniy"><label for="Ofisniy">Ofisniy</label>
@@ -36,7 +37,7 @@
 					<p>Read about 3D Rending.</p>
 				</div>
 			</div>
-		</div>
+		</main>
 		<script>
 			var app = angular.module('pcRelested', []);
 
