@@ -12,9 +12,16 @@
 	<body class="container-fluid">
 		<div ng-controller="InvoiceController as invoice">
 			<h1>Abbos aka:</h1>
-			CPU/Yadro: <input class="form-control" type="number" min="0" ng-model="invoice.cpu" required><br>
-			GPU: <input class="form-control" type="number" min="0" ng-model="invoice.gpu" required ><br>
-				
+			<form>
+				<div class="form-group d-flex mt-3">
+					CPU/Yadro: <input class="form-control w-50" type="number" min="0" ng-model="invoice.cpu" required>
+					GPU: <input class="form-control w-50" type="number" min="0" ng-model="invoice.gpu" required>
+				</div>
+
+				<div class="form-group d-flex">
+					RAM: <input class="form-control w-50" type="number" min="0" ng-model="invoice.ram" required>
+				</div>
+
 				<div class="form-group">
 					    <label for="select">Example select</label>
 					<select ng-model="invoice.inCurr" class="form-control" id="select">
@@ -22,13 +29,14 @@
 						<option ng-repeat="c in invoice.currencies">{{c}}</option>
 					</select>
 				</div>
-			<div>
-				<b>Jami:</b>
-				<span ng-repeat="c in invoice.currencies">
-					{{invoice.total(c) | currency:c}}
-				</span><br>
-				<button class="btn" ng-click="invoice.pay()">Pay</button>
-			</div>
+				<div>
+					<b>Jami:</b>
+					<span ng-repeat="c in invoice.currencies">
+						{{invoice.total(c) | currency:c}}
+					</span><br>
+					<button class="btn" ng-click="invoice.pay()">Pay</button>
+				</div>
+			</form>
 			<hr>
 		</body>
 	</html>
