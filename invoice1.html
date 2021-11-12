@@ -12,11 +12,8 @@
 	<body class="container-fluid">
 		<div ng-controller="InvoiceController as invoice">
 			<h1>Abbos aka:</h1>
-			<div>
-				RAM: <input class="form-control" type="number" min="0" ng-model="invoice.qty" required > GB
-			</div>
-			<div>
-				Kompyuterlar soni: <input class="form-control" type="number" min="0" ng-model="invoice.cost" required >
+			CPU/Yadro: <input class="form-control" type="number" min="0" ng-model="invoice.cpu" required><br>
+			GPU: <input class="form-control" type="number" min="0" ng-model="invoice.gpu" required ><br>
 				
 				<div class="form-group">
 					    <label for="select">Example select</label>
@@ -25,7 +22,6 @@
 						<option ng-repeat="c in invoice.currencies">{{c}}</option>
 					</select>
 				</div>
-			</div>
 			<div>
 				<b>Jami:</b>
 				<span ng-repeat="c in invoice.currencies">

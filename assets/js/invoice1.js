@@ -2,8 +2,8 @@
   'use strict';
 angular.module('invoice1', [])
   .controller('InvoiceController', function InvoiceController() {
-    this.qty = 1;
-    this.cost = 1;
+    this.cpu = 1;
+    this.gpu = 1;
     this.inCurr = 'UZS';
     this.currencies = ['UZS', 'USD', 'RUB'];
     this.usdToForeignRates = {
@@ -13,7 +13,7 @@ angular.module('invoice1', [])
     };
 
     this.total = function total(outCurr) {
-      return this.convertCurrency(this.qty * this.cost, this.inCurr, outCurr);
+      return this.convertCurrency(this.cpu * this.gpu, this.inCurr, outCurr);
     };
     this.convertCurrency = function convertCurrency(amount, inCurr, outCurr) {
       return amount * this.usdToForeignRates[outCurr] / this.usdToForeignRates[inCurr];
